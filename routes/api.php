@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\TasksController;
+use App\Http\Controllers\Api\NotebookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +15,8 @@ use App\Http\Controllers\Api\TasksController;
 |
 */
 
-Route::get('task/{id}', [TasksController::class, 'show']);
-Route::get('tasks', [TasksController::class, 'index']);
-Route::post('task', [TasksController::class, 'store']);
-Route::put('task/{id}', [TasksController::class, 'update']);
-Route::delete('task/{id}', [TasksController::class, 'destroy']);
+Route::get('note/{id}', [NotebookController::class, 'show']);
+Route::get('note', [NotebookController::class, 'index']);
+Route::post('note', [NotebookController::class, 'store']);
+Route::put('note/{id}', [NotebookController::class, 'update']);
+Route::delete('note/{id}', [NotebookController::class, 'destroy']);
